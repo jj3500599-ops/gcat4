@@ -811,7 +811,7 @@ def run_flask():
     """Flask 서버 실행"""
     try:
         logger.info(f"[Flask] 포트 {PORT}에서 Flask 서버 시작")
-        app.run(host='0.0.0.0', port=PORT, debug=False)
+        app.run(host='0.0.0.0', port=PORT, debug=False, use_reloader=False)
     except Exception as e:
         logger.error(f"[Flask 오류] Flask 서버 실행 중 오류: {e}")
 
