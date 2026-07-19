@@ -1,3 +1,8 @@
+import sys
+import os
+
+# audioop 오류 무시
+sys.modules['audioop'] = None
 import discord
 from discord.ext import commands, tasks
 import json
