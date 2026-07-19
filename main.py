@@ -1,8 +1,21 @@
 import sys
-import os
+import importlib.util
 
-# audioop 오류 무시
-sys.modules['audioop'] = None
+# audioop 모듈 차단
+sys.modules['audioop'] = type(sys)('audioop')
+
+import discord
+from discord.ext import commands, tasks
+import json
+import os
+from datetime import datetime, timedelta
+import string
+import random
+import hashlib
+from dotenv import load_dotenv
+from flask import Flask, request, jsonify
+import threading
+import logging
 import discord
 from discord.ext import commands, tasks
 import json
