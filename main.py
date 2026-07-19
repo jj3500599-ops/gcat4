@@ -22,7 +22,7 @@ import secrets
 load_dotenv()
 
 TOKEN = os.getenv('DISCORD_TOKEN')
-PORT = int(os.environ.get('PORT', 3000))
+PORT = int(os.environ.get('PORT', 10000))
 DATABASE_FILE = 'keys_database.json'
 ADMIN_ROLE = "운영진"
 KEY_LENGTH = 32
